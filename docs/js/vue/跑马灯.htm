@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="浪起来" @click="lang">
+    <input type="button" value="低调" @click="stop">
+    <h4>{{msg}}</h4>
+</div>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "猥琐发育,别浪！！！！！",
+            interval: null
+        },
+        methods: {
+            lang: function () {
+                console.log(this.msg);
+                var _this = this;
+                _this.interval = setInterval(function () {
+                    //获取第一个字符
+                    var start = _this.msg.substring(0, 1);
+                    //得到后面的字符
+                    var end = _this.msg.substring(1);
+                    //重新赋值
+                    _this.msg = end + start;
+                }, 400)
+            },
+            stop:function () {
+                //停止定时器
+                clearInterval(this.interval);
+            }
+        }
+
+    });
+
+</script>
+</body>
+</html>
+</html>

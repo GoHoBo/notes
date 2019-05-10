@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算属性</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <h1> Computed 计算属性</h1>
+        <button @click="a++">Add to A</button>
+        <button @click="b++">Add to B</button>
+        <p>A - {{a}}</p>
+        <p>B - {{b}}</p>
+        <p>Age + A = {{addToA}}</p>
+        <!-- ()不可以用 -->
+        <p>Age + B = {{addToB}}</p>
+    </div>
+    <script>
+        new Vue({
+            el:"#vue-app",
+            data:{
+                a:0,
+                b:0,
+                age:20
+            },
+            methods: {
+                // addToA:function(){
+                //     console.log("add to a")
+                //     return this.a + this.age;
+                // },
+                // addToB:function(){
+                //     console.log("add to b")
+                //     return this.b + this.age
+                // }
+            },
+            computed: {
+                addToA:function(){
+                    console.log("add to a")
+                    return this.a + this.age;
+                },
+                addToB:function(){
+                    console.log("add to b")
+                    return this.b + this.age
+                }
+            },
+        })
+    </script>
+</body>
+</html>

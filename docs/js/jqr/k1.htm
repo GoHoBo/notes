@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0;
+            padding: 0;
+        }
+        div{
+            height: 200px;
+            background-color: brown;
+            margin-bottom: 10px;
+            display: none;   
+        }       
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        // window.onload = function(){
+        //     document.getElementById("demo").onclick = function(){
+                //1.让div展示出来
+                //2.给div一个文本内容
+                // var divs = document.getElementsByTagName("div");
+                // for(var i = 0;i < divs.length ; i++){
+                //     divs[i].style.display = "block";
+                //     divs[i].innerText = "我是内容";
+        //         }
+        //     }
+        // }
+        $(document).ready(function(){
+            $("#demo").click(function(){
+                $("div").show(2100).html("我是内容")
+            })
+        })
+
+        // $(document).ready(function(){
+        //     alert("嘿嘿嘿")
+        // })
+    </script>
+</head>
+<body>
+    <input type="button" value="我是按钮" id="demo">
+    <div id="dd"></div>
+    <div id="dd"></div>
+    <div id="dd"></div>
+    <div id="dd"></div>
+</body>
+</html>

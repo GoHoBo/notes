@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+            height: 30px;
+            width: 30px;
+            border: 1px solid red;
+            text-align: center;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="images/0.jpg" alt="">
+    <ul>
+        <li onclick="imga1(id)"><span>1</span></li>
+        <li onclick="imga2(id)"><span>2</span></li>
+        <li onclick="imga3(id)"><span>3</span></li>
+        <li onclick="imga4(id)"><span>4</span></li>
+        <li onclick="imga5(id)"><span>5</span></li>
+    </ul>
+    <script>
+        function imga1(id){
+            document.getElementById("image").src="1.jpg";
+        }
+        function imga2(id){
+            document.getElementById("image").src="3.jpg";
+        }
+        function imga3(id){
+            document.getElementById("image").src="4.jpg";
+        }
+        function imga4(id){
+            document.getElementById("image").src="5.jpg";
+        }
+        function imga5(id){
+            document.getElementById("image").src="2.jpg";
+        }
+    </script>
+</body>
+</html>

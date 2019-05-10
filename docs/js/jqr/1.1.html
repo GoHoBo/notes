@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小动画</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div1").fadeOut(5000);
+                $("#div2").fadeOut(6000);
+                $("#div3").fadeOut(7000);
+                $("#div4").fadeOut(7000);$("#div5").fadeOut(7000);$("#div6").fadeOut(7000);$("#div7").fadeOut(7000);
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>演示带有不同参数的fadeout() 方法。</p>
+    <button>点击这里，使三个矩形淡出</button>
+    <br><br>
+    <div id="div1" style="width:50px;height: 300px;background-color: aqua;"></div>
+    <br>
+    <div id="div2" style="width:50px;height: 300px;background-color: rgb(136, 255, 0);"></div>
+    <br>
+    <div id="div3" style="width:50px;height: 300px;background-color: rgb(2, 116, 116);"></div>
+    <div id="div4" style="width:50px;height: 300px;background-color: rgb(255, 136, 0);"></div>
+    <br>
+    <div id="div5" style="width:50px;height: 300px;background-color: rgb(0, 153, 255);"></div>
+    <br>
+    <div id="div6" style="width:50px;height: 300px;background-color: rgb(255, 0, 212);"></div>
+    <br>
+    <div id="div7" style="width:50px;height: 300px;background-color: rgb(255, 0, 0);"></div>
+    <br>
+</body>
+</html>

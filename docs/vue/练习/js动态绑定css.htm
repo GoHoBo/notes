@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js动态绑定css</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        span{
+            background:red;
+            display: inline-block;
+            padding:10px;
+            color: #fff;
+            margin:10px 0; 
+        }
+        .changeColor span{
+            background: green;
+        }
+        .changeLength span:after{
+            content: "length";
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1> 动态 CSS Class</h1>
+
+        <h2>示例 1</h2>
+        <!-- <div v-on:click="changeColor = !changeColor" 
+        v-bind:class="{changeColor:changeColor}">
+            <span>henry</span>
+        </div> -->
+
+        <h2>示例 2</h2>
+        <button @click="changeColor = !changeColor">
+            改变颜色</button>
+        <button @click="changeLength = !changeLength">
+            改变长度</button>
+        <div v-bind:class="compClasses">
+            <span>Herry</span>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                changeColor:false,
+                changeLength:false,
+            },
+            methods: {
+                
+            },
+            computed: {
+                compClasses:function(){
+                    return{
+                        changeLength:this.changeLength,
+                        changeColor:this.changeColor
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>

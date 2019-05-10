@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var txt="";
+function myFunction()
+{
+try{
+var x;
+    var d=new Date().getDdday();
+    switch (d)
+        {
+            case 0:
+                x="今天周日";
+                break;
+            case 1:
+                x="今天周一";
+                break;
+            case 2:
+                x="今天周二";
+                break;
+            case 3:
+                x="今天周三";
+                break;
+            case 4:
+                x="今天周四";
+                break;
+            case 5:
+                x="今天周五";
+                break;
+            case 6:
+                x="今天周六";
+                break;
+        }
+        document.getElementById("demo").innerHTML=x
+    }
+catch(err)
+  {
+  txt="There was an error on this page.\n\n";
+  txt+="Error description: " + err.myFunction + "\n\n";
+  txt+="Click OK to continue.\n\n";
+  alert(txt);
+  }
+}
+</script>
+</head>
+
+<body>
+        <p>点击下面的按钮来显示今天是周几：</p>
+        <button onclick="myFunction()">点击这里</button>
+        <p id="demo"></p>
+<input type="button" value="View message" onclick="myFunction()">
+</body>
+
+</html>

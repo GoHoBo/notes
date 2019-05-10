@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{snn}}</h1>
+        <button @click="getName">点名</button>
+    </div>
+    <script src="script/vue.js"></script>
+    <script>
+        new Vue ({
+            el:"#app",
+            data:{
+                nl:["小明",'小李','小三','小一','小二','小四','小五','小六','小七','小八'],
+                snn:'同学名字'
+            },
+            methods:{
+                getName(){
+                    this.snn = this.nl[this.getRandom()];
+                },
+                getRandom(){
+                    return Math.floor(Math.random() * this.nl.length)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

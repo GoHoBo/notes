@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>  
+    <h1> 我的网页</h1>
+        <p id="myPar">我是一个丑比</p>
+        <div id="myDiv">我很矮</div>
+        <p>
+            <button type="button" onclick="myFunction()">点击这里！！</button>
+        </p>
+    <script>
+        function myFunction()
+            {
+                document.getElementById("myPar").innerHTML="后来我变帅了";
+                    document.getElementById("myDiv").innerHTML="但是并没有长高";
+                }
+    </script>
+    <p>当你点击上面的按钮时，你会改变我。</p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">  <!--content 这个class是正个网页的内容-->
+        <form action="">   <!--form创建一个表单可以套任何东西-->
+            <div class="main-top">  <!--正个网页分两部分 main-top（是整个网页的上部分）-->
+               <div class="main_top_heard">  <!--main-top-header 正个网页的上半部分的（头部）-->
+                   <h3>游客信息</h3> <!--h3标题标签-->
+                   <button>常用游客</button> <!--button 普通按钮-->
+               </div>
+               <div class="main_top_center">  <!--main-top-center 这是正个页面主题体的上半部分的内容区-->
+                   <p>游客1</p> <!--p 标签段落标签可以存储文字等-->
+                    <p>
+                        <label for="">游客类型</label> <!--label在form里使用文字标签 里面的for值可以跟任何input里面的id值进行关联 不能重复-->
+                        <input type="radio" name="name"> <!--input控件标签 type控件可以套控件值  name表单名称（可以重复）在input控件标签里设置name可以把radio里设置按钮单选两个值必须重复才能实现-->
+                        <label for="">成人</label>
+                        <input type="radio" name="name">
+                        <label for="">儿童</label>
+                    </p>
+                    <p>
+                        <label for="id">姓名</label>
+                        <span>*</span> <!--span无语义标签 用来存储文字 用于div布局排版-->
+                        <select name="" id=""> <!--select（下拉菜单标签） 里面套 option（设置选项） value（用来提交option里面的值）-->
+                            <option value="hhh">hhh</option>
+                            <option value="jjj">jjj</option>
+                        </select>
+                        <input  type="text" placeholder="姓名" id="id"> 
+                         <!--
+                             value和palceholder区别
+                             value（设置表单中的默认文字  但是在传输表单中可以跟表单进行提交  ）
+                             palceholder（设置表单中的默认文字） 但是传输表单不可以跟表单进行提交
+                         -->
+                        <!--
+                            关联{
+                                input 里面的id 就像人的身份证一样不可以重复（但是关联的时候可以进行重复
+                                因为要有到id的属性特征进行关联）
+                                label 里面的for（和上面的id值一样）
+                                input里面的id   和   label里面的for 在进行关联的情况下必须一样
+                            }
+                        -->
+                    </p>
+                    <p>
+                        <label for="">性别</label>
+                        <input type="radio"> <!--input控件标签 里面的type值里面的（radio） 单选按钮-->
+                        <label for="">男</label>
+                        <input type="radio">
+                        <label for="">女</label>
+                    </p>
+                    <p>
+                        <label for="id1">手机号码</label>
+                        <input type="text" id="id1">
+                    </p>
+                    <p>
+                        <label for="id3">证件</label>
+                        <span>*</span>
+                        <select name="" id="">
+                            <option value="mmm">mmm</option>
+                            <option value="aaa">sss</option>
+                        </select>
+                        <input type="text" placeholder="证件号码" id="id3">
+                    </p>
+                </div>
+               <div class="main-top-bottom">  <!--main-top-bottom 整体内容的上半步分的下部分 -->
+                   <input type="submit"> <!--input控件标签 里面的type值 submit提交按钮 value设置提交按钮的文字-->
+               </div> 
+            </div>
+            <div class="main-bottom"></div> <!--main-bottom 整体内容的下部分-->
+        </form>
+    </div>
+</body>
+</html>
