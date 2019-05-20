@@ -1,0 +1,51 @@
+{% extends "moban.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="../public/css/twelve.css">
+<body>
+    <div id="header">
+        <img class="img1" src="../public/img/状态栏.jpg" alt="">
+        <a href="javascript:history.back(-1)"><img class="img2" src="../public/img/Return.png" alt=""></a>
+        <a href="/five"><img class="img_right" src="../public/img/add.png" alt=""></a>
+        <p>关联用户</p>
+    </div>
+    <div id="coniatner">
+        <ul>
+            <li  class="li-1">
+                <p>保险箱按此顺序拨号,拖动可排序</p>
+                <img @click="del(item)" src="../public/img/Forknumber.png" alt="">
+            </li>
+            <li class="li-2">
+                <div class="bj">
+                    <img  src="../public/img/user.png" alt="">
+                </div>
+                <p>13149869439</p>
+            </li>
+            <li class="li-3">
+                <div class="bj">
+                    <img  src="../public/img/user.png" alt="">
+                </div>
+                <p>13333333333</p>
+            </li>
+            <li class="li-4">
+                <span>49869439</span>
+                <div class="del">
+                    <p>删除</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    {% endblock %}
+
+    {% block js %}
+    <script src="../public/js/fontsizeset.js"></script>
+    <script src="../public/js/jquery.js"></script>
+    <script>
+        $(".li-1 img").click(function(){
+        $(this).parent().hide();
+    });
+        $(".del ").click(function(){
+        $(this).parent().hide();
+    });
+    </script>
+{% endblock %}
